@@ -1,6 +1,9 @@
 from enum import Enum
 from collections import namedtuple
-from typing import List, Literal
+try:
+    from typing import Literal
+except ImportError:
+    from typing_extensions import Literal
 
 
 FastResource = Literal["WOOD", "BRICK", "SHEEP", "WHEAT", "ORE"]
